@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Simple Modern Website</title>
+<style>
+  /* Reset and base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+  }
+  a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover {
+    color: #0056b3;
+  }
+
+  /* Header */
+  header {
+    background: linear-gradient(90deg, #4b6cb7, #182848);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  }
+  header h1 {
+    margin: 0 0 0.5rem 0;
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
+  header p {
+    font-size: 1.2rem;
+    opacity: 0.85;
+  }
+
+  /* Navigation */
+  nav {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  nav a {
+    padding: 1rem 1.5rem;
+    display: inline-block;
+    font-weight: 600;
+  }
+  nav a:hover, nav a.active {
+    background: #4b6cb7;
+    color: white;
+  }
+
+  /* Main container */
+  main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  section {
+    margin-bottom: 3rem;
+  }
+  section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #182848;
+    border-bottom: 3px solid #4b6cb7;
+    padding-bottom: 0.5rem;
+  }
+  section p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    background: #4b6cb7;
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    border-radius: 4px;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(75,108,183,0.4);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  .btn:hover {
+    background: #3a5498;
+    box-shadow: 0 4px 10px rgba(58,84,152,0.6);
+  }
+
+  /* Footer */
+  footer {
+    background: #182848;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
+    opacity: 0.75;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2rem;
+    }
+    nav a {
+      padding: 0.75rem 1rem;
+    }
+    main {
+      margin: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Welcome to UNMURA</h1>
+  <p>A clean, modern, and responsive layout</p>
+</header>
+
+<nav>
+  <a href="#about" class="active">About</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main>
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We build beautiful and functional websites that look great on any device. Our experienced team ensures every project delivers a smooth user experience with modern design and interactive elements.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <p>We offer custom web design, development, and maintenance. Whether you need a simple landing page, an online store, or a complex web application, we can help bring your vision to life.</p>
+    <button class="btn" onclick="alert('SAHKAN DULU RUU PERAMPASAN ASET WOY!')">DONASI VOUCHER MAKAN GRATIS DARI PRABOWO</button>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions? Feel free to reach out by email or phone. We look forward to working with you!</p>
+    <p>Email: <a href="mailto:info@example.com">ajgan2323@gamil.com</a></p>
+    <p>Phone: <a href="tel:082183101072">082183101072</a></p>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Simple Mode by Dz 
+</footer>
+
+<script>
+  // Add smooth scroll for navigation links
+  document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e){
+      e.preventDefault();
+      document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+      this.classList.add('active');
+      const target = document.querySelector(this.getAttribute('href'));
+      target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+
+</body>
+</html>
+
